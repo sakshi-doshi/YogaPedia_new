@@ -3,7 +3,7 @@
     <link href="/static/css/lotus.css" rel="stylesheet" />
  
   <body>
-    <h2 class="yoga-head">Lotus Pose</h2>
+    <h2 class="yoga-head">Padmasana Asana</h2>
     <hr class="hr"></hr>
     <div class="vid-page">
       <div class="gif">
@@ -15,20 +15,49 @@
   </div>
   <div class="button-container">
       <button type="button" onclick="startTimer()">Start</button>
-      <button type="button" onclick="stopTimer()">Stop</button>
+      <button type="button" id="stopTimerBtn" onclick="stopTimer()">Stop</button>
       <button id="timer" style="display: none;"></button> </button>
   </div>
   <div id="timer"></div>
   
-        
-     
-     
+  <audio style="display: none;" controls autoplay loop>
+    <source src="/static/audio/lotus audio.mp3 "  type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+<dialog  style=" border-radius: 20px;">
+  <video width="320" height="240" style="margin-left: 60px;" autoplay>
+  <source src="/static/GIF/try-again-message.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+    </video>
+    <p id="dialogText" style="color: red; font-size:25px; font-style: bold; ">Make sure your full body
+         is visible or try again</p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  
+</dialog> 
+<!-- 
+   <dialog  style=" border-radius: 20px;">
+    <img class="dialogImg" style="height: 150px; width: 200px; display:block;margin:  auto;" src="/static/GIF/keep it up final.jpg"> 
    
-        <!-- <div id="next-btn"  onclick="nextBtnAction()"></div> -->
-        
-        
+    <p id="dialogText" style="color: red; font-size:25px; font-style: bold; ">Well tried !! Can do better and practice more. </p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  </dialog>   -->
+
+
+  <!-- <dialog  style=" border-radius: 20px;">
+
+    <img class="dialogImg" style="height: 150px; width: 200px;" src="/static/GIF/well tried final.png"> 
     
+    <p id="dialogText" style="color: rgb(12, 96, 4); font-size:25px; font-style: bold ;text-align: center; ">Well done !! Keep it up </p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  </dialog>  -->
+
+
 <script type="text/javascript">
+        const dialog = document.querySelector("dialog");
+        const showButton = document.querySelector("dialog + button");
+        const closeButton = document.querySelector("dialog button");
 
     
    
@@ -44,6 +73,49 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timerInterval);
+    dialog.showModal();
+    // var timerElement = document.getElementById('timer');
+    // var timerValue=timerElement.innerText;
+    // console.log(timerValue);
+
+    // var timeParts = timerValue.split(":");
+    // var minutes = parseInt(timeParts[0]);
+    // var seconds = parseInt(timeParts[1]);
+    // var milliseconds = parseInt(timeParts[2]);
+
+    // // Convert time to milliseconds
+    // var timerMilliseconds = (minutes *60  + seconds )*1000 + milliseconds
+    // //console.log(timerMilliseconds);
+  
+    // if(timerMilliseconds< 1000000){
+    //     // alert("Make sure your full body is visible or try again")
+    //     dialog.showModal();
+        
+    // }
+    //  else if(timerMilliseconds > 10000 && timerMilliseconds < 25000){
+    //     dialogText.textContent = "Great!! Can do better";
+    //     var imgElement=document.getElementById("dialogImg");
+    //     imgElement.src='static/GIF/well_tried.gif';  
+    //     dialog.showModal();    
+    // }
+    // else{
+    //     console.log("HI");
+    // }
+    
+   
+    
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+        });
+
+    
+
+
+    // Call the showPopup function after stopping the timer
+    
+    //document.getElementById("stopTimerBtn").innerText=timerMilliseconds;
+    //document.getElementById("stopTimerBtn").innerText="STOP"
+   
 }
 
 function updateTimer() {
@@ -77,6 +149,10 @@ function pad(number, length) {
         
         
 };
+
+
+
+
     
 </script>
 

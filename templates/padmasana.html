@@ -24,13 +24,35 @@
     <source src="/static/audio/padmasana.mp3 "  type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+
 <dialog  style=" border-radius: 20px;">
-    <img class="dialogImg" src="/static/GIF/try agian.webp"> 
-    <!-- try again -->
+  <video width="320" height="240" style="margin-left: 60px;" autoplay>
+  <source src="/static/GIF/try-again-message.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+    </video>
     <p id="dialogText" style="color: red; font-size:25px; font-style: bold; ">Make sure your full body
          is visible or try again</p>
     <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
-  </dialog>
+  
+</dialog> 
+
+   <!-- <dialog  style=" border-radius: 20px;">
+    <img class="dialogImg" style="height: 150px; width: 200px;" src="/static/GIF/keep it up final.jpg"> 
+   
+    <p id="dialogText" style="color: red; font-size:25px; font-style: bold; ">Well tried !! Can do better and practice more. </p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  </dialog>   -->
+
+<!-- 
+  <dialog  style=" border-radius: 20px;">
+
+    <img class="dialogImg" style="height: 150px; width: 200px;" src="/static/GIF/well tried final.png"> 
+    
+    <p id="dialogText" style="color: rgb(12, 96, 4); font-size:25px; font-style: bold ;text-align: center; ">Well done !! Keep it up </p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  </dialog>  -->
+
 
 <script type="text/javascript">
         const dialog = document.querySelector("dialog");
@@ -60,23 +82,22 @@ function stopTimer() {
     var milliseconds = parseInt(timeParts[2]);
 
     // Convert time to milliseconds
-    var timerMilliseconds = (minutes *60  + seconds )*1000 + milliseconds
+    var timerMilliseconds = (minutes *60  + seconds )*1000 + milliseconds;
+    dialog.showModal();
     //console.log(timerMilliseconds);
   
-    if(timerMilliseconds< 10000){
-        // alert("Make sure your full body is visible or try again")
-        dialog.showModal();
+    // if(timerMilliseconds< 10000){
+    //     // alert("Make sure your full body is visible or try again")
+    //     dialog.showModal();
         
-    }
-     else if(timerMilliseconds > 10000 && timerMilliseconds < 25000){
-        dialogText.textContent = "Great!! Can do better";
-        var imgElement=document.getElementById("dialogImg");
-        imgElement.src='static/GIF/well_tried.gif';  
-        dialog.showModal();    
-    }
-    else{
-        console.log("HI");
-    }
+    // }
+    //  else if(timerMilliseconds > 10000 && timerMilliseconds < 25000){
+    //     // dialogText.textContent = "Great!! Can do better";
+    //     dialog.showModal();    
+    // }
+    // else{
+    //     console.log("HI");
+    // }
     
    
     
