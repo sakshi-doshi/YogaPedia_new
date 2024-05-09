@@ -1,0 +1,304 @@
+.input{
+    margin-left: 15%;
+    margin-top: -1%;
+    text-align: right;
+}
+
+.button-container {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    justify-content: space-around; /* Add space between buttons */
+    margin-top: -2%;
+   /* Adjust the top margin as needed */
+   /* Adjust the top margin as needed */
+    
+}
+
+.button-container button {
+    width: 100px;
+    height: 50px;
+    margin-top: 500px;
+    margin-left: 10px;
+    background-color: #4AD295;
+  
+
+    
+     /* Adjust the button width as needed */
+    /* Add other button styles as needed */
+}
+ .container{
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+ }
+
+
+.label-container {
+    
+    width: 150px;
+    height: 50px;
+    bottom: 210px;
+    margin-left: 10px;
+    background-color: #7a78ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    
+   /* Adjust the top margin as needed */
+   /* Adjust the top margin as needed */
+    
+}
+.timerStartButton{
+    width: 120px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-color: #4AD295;
+    margin-top: 200px; /* Adjust as needed */
+    margin-left: 10px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    /* Add more styles as needed */
+
+}
+.timerStopButton{
+    width: 120px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-color: #4AD295;
+    margin-top: 250px; /* Adjust as needed */
+    margin-left: 10px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+
+}
+
+.next-btn {
+    width: 120px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-color: #4AD295;
+    margin-top: 200px; /* Adjust as needed */
+    margin-left: 10px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    /* Add more styles as needed */
+}
+
+
+#timer {
+    margin-top: 500px;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+    
+  
+
+    
+     /* Adjust the button width as needed */
+    /* Add other button styles as needed */
+
+
+.bgnr{
+    height: 3.5rem;
+    width: 16rem;
+    margin-top: 1%;
+    background-color: #4AD295;
+    border-radius: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    box-shadow: inset 0 0 0 0 ;
+    transition: ease-out 0.3s;
+    font-family: 'Roboto Mono', monospace;
+}
+.bgnr:hover{
+    cursor: pointer;
+    box-shadow: inset 285px 0 0 0 black;
+    color: white;
+}
+
+/* .button-container {
+    text-align: 50px; /* Center the buttons horizontally */
+*/
+ button {
+        display: inline-block; /* Display buttons in a line */
+        margin: 0 400px; /* Add margin for spacing between buttons */
+        
+    }
+.vid-input{
+    width: 40rem;
+    border-radius: 15px;
+    align-content: center;
+    display: flex;
+}
+
+.video{
+    height: "100px";
+    width: "2000px";
+
+}
+#canvas{
+    height: 35rem;
+    width:370px;
+    /*marin-top: 20px;*/
+    margin-left:50px;
+}
+.gif{
+    margin-left: 10%;
+    margin-top: -1%;
+}
+.gif1{
+    height: 35rem;
+}
+.vid-page{
+    display: flex;
+}
+.yoga-head{
+    margin-left: 40.2%;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.hr{
+    position: relative;
+    top: 2px;
+    border: none;
+    height: 3px;
+    background: #4ad295;
+    margin-bottom: 50px;
+}
+.top{
+    display: flex;
+}
+.chart-button{
+  height: 3.8rem;
+  width: 13rem;
+  margin-left: -190%;
+  margin-top: 230%;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: inset 0 0 0 0;
+  transition: ease-out 0.3s;
+  font-family: "Roboto Mono", monospace;
+  align-content: center;
+}
+.see{
+  font-size: 1rem;
+  /*margin-top: 9.5%;*/
+}
+.chart-button:hover{
+  cursor: pointer;
+  box-shadow: inset 207px 0 0 0 #4ad295;
+  color: #040c18;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ddd
+ 
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.popup{
+    width: 350px;
+    height: 280px;
+    padding: 30px 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    top: -200%;
+    transform:translate(-50% ,-50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+                top 1000ms ease-in-out,
+                transform 1000ms ease-in-out;
+
+}
+
+.popup.active{
+    opacity: 1;
+    top: 50%;
+    transform:translate(-50% ,-50%) scale(1);
+    transition: tranform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.9);
+       
+}
+
+.popup .icon{
+    margin:5px 0px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #34f234;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 60px;
+}
+
+.popup .icon i.fa{
+    font-size: 30px;
+    color: #34f234;
+
+}
+
+.popup .title{
+    margin:5px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.popup .description{
+    color: #222;
+    font-size:15px;
+    padding: 5px;
+}
+
+.popup .dismiss-btn{
+    margin-top:15px;
+}
+
+.popup .dismiss-btn button{
+    padding: 10px 20px;
+    background:#111;
+    color: #f5f5f5;
+    border: 2px solid #111;
+    font-size: 16px;
+    font-weight: 600;
+    outline:none;
+    border-radius:10px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.popup .dismiss-btn button:hover{
+    color:#111 ;
+    background: #f5f5f5 ;
+}
+
+
+
+
+
+
+ 

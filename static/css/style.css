@@ -1,0 +1,125 @@
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+.video{
+    height: "100px";
+    width: "2000px";
+}
+/* #canvas{
+    height: 500px;
+    width: 300;
+    body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  } */
+
+.video{
+    height: "100px";
+    width: "2000px";
+}
+#canvas{
+    height: 500px;
+    width: 300;
+    margin: auto; /* This centers the element horizontally */
+    display: block; /* This ensures the margin works correctly */
+}
+/*   
+  .control{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+  }
+  
+  button{
+    margin: 1%;
+    border-radius: 10px;
+      --c: no-repeat linear-gradient(#0f4c39 0 0);
+      background: 
+        var(--c) calc(-100% + var(--i, 0) * 100%) 100% / 50% calc(100% * var(--i, 0) + .08em),
+        var(--c) calc( 200% - var(--i, 0) * 100%) 0 / 50% calc(100% * var(--i, 0) + .08em);
+      transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - var(--i, 0) * .3s);
+    padding: 1%;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    --i: 1;
+    color: white;
+  }
+  
+  button::selection {
+    --i: 1;
+    color: white;
+  } 
+  
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(134, 192, 129);
+    border: 3px solid green;
+    margin: auto;
+    width: 80%;
+    min-height: fit-content;
+    height: 60%;
+    text-align: center;
+    padding: 5%;
+  } 
+  */
+}
+
+/*   
+  .control{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+  }
+  
+  button{
+    margin: 1%;
+    border-radius: 10px;
+      --c: no-repeat linear-gradient(#0f4c39 0 0);
+      background: 
+        var(--c) calc(-100% + var(--i, 0) * 100%) 100% / 50% calc(100% * var(--i, 0) + .08em),
+        var(--c) calc( 200% - var(--i, 0) * 100%) 0 / 50% calc(100% * var(--i, 0) + .08em);
+      transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - var(--i, 0) * .3s);
+    padding: 1%;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    --i: 1;
+    color: white;
+  }
+  
+  button::selection {
+    --i: 1;
+    color: white;
+  } 
+  
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(134, 192, 129);
+    border: 3px solid green;
+    margin: auto;
+    width: 80%;
+    min-height: fit-content;
+    height: 60%;
+    text-align: center;
+    padding: 5%;
+  } 
+  */

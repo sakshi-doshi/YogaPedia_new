@@ -1,0 +1,144 @@
+div{
+    display: block;
+}
+.vid-page {
+    display: flex;
+    align-items: flex-start;
+     /* Align items to the start of the flex container */
+}
+
+.gif {
+    flex: 1; /* Let the GIF take up available space */
+}
+
+.video-input {
+    
+    flex: 1; 
+    margin-right: 250px;
+    /* Let the video input take up available space */
+    /* margin-left: 20px; */
+     /* Adjust margin as needed */
+}
+
+.button-container {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+button {
+    width: 120px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    background-color: #4AD295;
+    display: inline-block; /* Display buttons in a line */
+    margin-block-end: 50px;
+
+     /* margin: 0 10px;  */ 
+    /* Add margin for spacing between buttons */
+    
+}
+
+#timer {
+    text-align: center; /* Center the timer */
+    background-color: #ffff     ;
+    color: red;
+    width: 300px;
+    
+    font-size:25px;
+    margin-left: 100px;
+    
+}
+
+
+
+.bgnr{
+height: 3.5rem;
+width: 16rem;
+margin-top: 1%;
+background-color: #4AD295;
+border-radius: 0.5rem;
+color: black;
+font-size: 1rem;
+box-shadow: inset 0 0 0 0 ;
+transition: ease-out 0.3s;
+font-family: 'Roboto Mono', monospace;
+}
+.bgnr:hover{
+cursor: pointer;
+box-shadow: inset 285px 0 0 0 black;
+color: white;
+}
+
+/* .button-container {
+text-align: 50px; /* Center the buttons horizontally */
+*/
+button {
+    display: inline-block; /* Display buttons in a line */
+    margin: 0 400px; /* Add margin for spacing between buttons */
+    
+}
+.vid-input{
+width: 40rem;
+border-radius: 15px;
+align-content: center;
+display: flex;
+}
+
+.video{
+height: "100px";
+width: "2000px";
+
+}
+#canvas{
+height: 35rem;
+width:370px;
+/*marin-top: 20px;*/
+margin-left:50px;
+}
+.gif{
+margin-left: 10%;
+margin-top: -1%;
+}
+.gif1{
+height: 35rem;
+width: 400px;
+}
+.vid-page{
+display: flex;
+}
+.yoga-head{
+margin-left: 40.2%;
+font-size: 2rem;
+font-family: 'Roboto', sans-serif;
+}
+.hr{
+position: relative;
+top: 2px;
+border: none;
+height: 3px;
+background: #4ad295;
+margin-bottom: 50px;
+}
+.top{
+display: flex;
+}
+.chart-button{
+height: 3.8rem;
+width: 13rem;
+margin-left: -190%;
+margin-top: 230%;
+background-color: black;
+border-radius: 0.5rem;
+color: white;
+box-shadow: inset 0 0 0 0;
+transition: ease-out 0.3s;
+font-family: "Roboto Mono", monospace;
+align-content: center;
+}
+.see{
+font-size: 1rem;
+/*margin-top: 9.5%;*/
+}
+.chart-button:hover{
+cursor: pointer;
+box-shadow: inset 207px 0 0 0 #4ad295;
+color: #040c18;
+}

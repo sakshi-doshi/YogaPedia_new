@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <link href="/static/css/lotus.css" rel="stylesheet" />
+ 
+  <body>
+    <h2 class="yoga-head">Lotus Pose</h2>
+    <hr class="hr"></hr>
+    <div class="vid-page">
+      <div class="gif">
+          <img class="gif1" src="/static/GIF/lotus.gif" alt="Lotus" />
+      </div>
+      <div class="video-input">
+        <img src="{% url 'video_feed' %}" alt="Pose Recognition">
+      </div>
+  </div>
+  <div class="button-container">
+      <button type="button" onclick="startTimer()">Start</button>
+      <button type="button" onclick="stopTimer()">Stop</button>
+      <button id="timer" style="display: none;"></button> </button>
+  </div>
+  <div id="timer"></div>
+  
+        
+     
+     
+   
+        <!-- <div id="next-btn"  onclick="nextBtnAction()"></div> -->
+        
+        
+    
+<script type="text/javascript">
+
+    
+   
+    
+function startTimer() {
+
+    startTime = new Date().getTime();
+    timerInterval = setInterval(updateTimer, 10); // Update every 10 milliseconds
+    var timerButton = document.getElementById("timer");
+    timerButton.style.display = "inline-block"; // Show the timer button
+
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function updateTimer() {
+    elapsedTime = new Date().getTime() - startTime;
+    const minutes = Math.floor(elapsedTime / (60 * 1000));
+    const seconds = Math.floor((elapsedTime % (60 * 1000)) / 1000);
+    const milliseconds = elapsedTime % 1000;
+    const formattedTime = `${pad(minutes, 2)}:${pad(seconds, 2)}:${pad(milliseconds, 2)}`;
+    document.getElementById('timer').innerHTML = formattedTime;
+}
+
+// Helper function to pad zeros to the left
+function pad(number, length) {
+    return (new Array(length + 1).join('0') + number).slice(-length);
+}
+   
+   
+    function nextBtnAction()
+    {
+        window.location.href='aasanList.html';
+    }
+
+    function timerStop(){
+
+            nextBtn = document.getElementById("next-btn");
+            nextBtn.innerHTML = "Next Pose";
+
+            
+           nextBtn.classList.add(nextBtnClass);    
+            
+        
+        
+};
+    
+</script>
+
+
+    </div>
+  
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <link href="/static/css/padmasan1.css" rel="stylesheet" />
+ 
+  <body>
+    <h2 class="yoga-head">Padmasana Asana</h2>
+    <hr class="hr"></hr>
+    <div class="vid-page">
+      <div class="gif">
+          <img class="gif1" src="/static/GIF/padmaasana.gif" alt="Padmaasana" />
+      </div>
+      <div class="video-input">
+        <img src="{% url 'video_feed' %}" alt="Pose Recognition">
+      </div>
+  </div>
+  <div class="button-container">
+      <button type="button" onclick="startTimer()">Start</button>
+      <button type="button" id="stopTimerBtn" onclick="stopTimer()">Stop</button>
+      <button id="timer" style="display: none;"></button> </button>
+  </div>
+  <div id="timer"></div>
+  
+  <audio style="display: none;" controls autoplay loop>
+    <source src="/static/audio/padmasana.mp3 "  type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<dialog  style=" border-radius: 20px;">
+    <img class="dialogImg" src="/static/GIF/try agian.webp"> 
+    <!-- try again -->
+    <p id="dialogText" style="color: red; font-size:25px; font-style: bold; ">Make sure your full body
+         is visible or try again</p>
+    <button autofocus style="height: 30px; width: 80px; display: block; margin: 0 auto;">Close</button>
+  </dialog>
+
+<script type="text/javascript">
+        const dialog = document.querySelector("dialog");
+        const showButton = document.querySelector("dialog + button");
+        const closeButton = document.querySelector("dialog button");
+
+    
+   
+    
+function startTimer() {
+
+    startTime = new Date().getTime();
+    timerInterval = setInterval(updateTimer, 10); // Update every 10 milliseconds
+    var timerButton = document.getElementById("timer");
+    timerButton.style.display = "inline-block"; // Show the timer button
+
+}
+
+function stopTimer() {
+    var timerElement = document.getElementById('timer');
+    var timerValue=timerElement.innerText;
+    console.log(timerValue);
+
+    var timeParts = timerValue.split(":");
+    var minutes = parseInt(timeParts[0]);
+    var seconds = parseInt(timeParts[1]);
+    var milliseconds = parseInt(timeParts[2]);
+
+    // Convert time to milliseconds
+    var timerMilliseconds = (minutes *60  + seconds )*1000 + milliseconds
+    //console.log(timerMilliseconds);
+  
+    if(timerMilliseconds< 10000){
+        // alert("Make sure your full body is visible or try again")
+        dialog.showModal();
+        
+    }
+     else if(timerMilliseconds > 10000 && timerMilliseconds < 25000){
+        dialogText.textContent = "Great!! Can do better";
+        var imgElement=document.getElementById("dialogImg");
+        imgElement.src='static/GIF/well_tried.gif';  
+        dialog.showModal();    
+    }
+    else{
+        console.log("HI");
+    }
+    
+   
+    
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+        });
+
+    
+
+
+    // Call the showPopup function after stopping the timer
+    
+    //document.getElementById("stopTimerBtn").innerText=timerMilliseconds;
+    //document.getElementById("stopTimerBtn").innerText="STOP"
+    clearInterval(timerInterval);
+}
+
+function updateTimer() {
+    elapsedTime = new Date().getTime() - startTime;
+    const minutes = Math.floor(elapsedTime / (60 * 1000));
+    const seconds = Math.floor((elapsedTime % (60 * 1000)) / 1000);
+    const milliseconds = elapsedTime % 1000;
+    const formattedTime = `${pad(minutes, 2)}:${pad(seconds, 2)}:${pad(milliseconds, 2)}`;
+    document.getElementById('timer').innerHTML = formattedTime;
+}
+
+// Helper function to pad zeros to the left
+function pad(number, length) {
+    return (new Array(length + 1).join('0') + number).slice(-length);
+}
+   
+   
+    function nextBtnAction()
+    {
+        window.location.href='aasanList.html';
+    }
+
+    function timerStop(){
+
+            nextBtn = document.getElementById("next-btn");
+            nextBtn.innerHTML = "Next Pose";
+
+            
+           nextBtn.classList.add(nextBtnClass);    
+            
+        
+        
+};
+
+
+
+
+    
+</script>
+
+
+    </div>
+  
+  </body>
+</html>
